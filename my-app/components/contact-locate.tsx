@@ -1,8 +1,7 @@
 "use client"
 
-import { getImagePath } from "@/lib/image-utils"
-
 import { Button } from "@/components/ui/button"
+import { getImagePath } from "@/lib/image-utils"
 import { Sparkles } from "lucide-react"
 
 export function ContactAndLocate() {

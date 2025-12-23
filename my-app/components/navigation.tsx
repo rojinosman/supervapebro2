@@ -3,8 +3,8 @@
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
 import { getImagePath } from "@/lib/image-utils"
+import { Menu, X } from "lucide-react"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -42,7 +42,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="flex justify-between items-center h-16">
           <a
-            href="#"
+            href="#about"
             className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md"
             aria-label="Go to homepage"
           >

@@ -28,10 +28,10 @@ export function HeroSection() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild>
-            <a href="/#products">Browse products</a>
+            <a href="#products">Browse products</a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="/#contact">Contact us</a>
+            <a href="#contact">Contact us</a>
           </Button>
         </div>
       </div>
