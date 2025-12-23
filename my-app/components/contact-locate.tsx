@@ -12,7 +12,7 @@ export function ContactAndLocate() {
           <div className="flex flex-col justify-center">
             <h2
               id="contact-heading"
-              className="mb-6 font-serif text-3xl font-bold leading-tight text-balance md:text-4xl lg:text-5xl"
+              className="mb-6 font-serif text-3xl font-bold leading-tight text-cyan-500 text-balance md:text-4xl lg:text-5xl"
             >
               We strive to create a quality experience and environment for our customers
             </h2>
@@ -23,13 +23,13 @@ export function ContactAndLocate() {
             </p>
 
             <div className="mt-4">
-              <p className="font-semibold text-foreground">Open Hours:</p>
+              <p className="font-semibold text-accent">Open Hours:</p>
               <p className="text-muted-foreground">10am-8pm Sunday-Thursday</p>
               <p className="text-muted-foreground">10am-10pm Friday-Saturday</p>
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <Button asChild>
+              <Button asChild variant="Text">
                 <a href="sms:+16192772255" aria-label="Text Super Vape Bros at 619-277-2255">
                   Text us
                 </a>
