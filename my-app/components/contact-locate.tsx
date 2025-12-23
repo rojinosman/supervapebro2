@@ -1,5 +1,7 @@
 "use client"
 
+import { getImagePath } from "@/lib/image-utils"
+
 import { Button } from "@/components/ui/button"
 import { Sparkles } from "lucide-react"
 
@@ -43,7 +45,7 @@ export function ContactAndLocate() {
 
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-lg bg-secondary">
-              <img src="/hookahAngle.png" alt="Products display" className="h-full w-full object-cover" />
+              <img src={getImagePath("/hookahAngle.png")} alt="Products display" className="h-full w-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -left-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary md:-bottom-8 md:-left-8 md:h-24 md:w-24">
               <Sparkles aria-hidden="true" className="h-8 w-8 text-primary-foreground md:h-12 md:w-12" />

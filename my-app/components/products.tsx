@@ -1,5 +1,7 @@
 "use client"
 
+import { getImagePath } from "@/lib/image-utils"
+
 export function ProductsSection() {
   const categories = [
     {
@@ -36,7 +38,7 @@ export function ProductsSection() {
           {categories.map((category, index) => (
             <li key={index} className="group relative aspect-[3/4] overflow-hidden rounded-lg bg-muted">
               <img
-                src={category.image || "/placeholder.svg"}
+                src={getImagePath(category.image || "/placeholder.svg")}
                 alt={category.title}
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
