@@ -7,18 +7,22 @@ export function ProductsSection() {
     {
       title: "Disposables",
       image: "/vapes.png",
+      alt: "Disposable vape devices on display",
     },
     {
       title: "Vape Juice",
       image: "/vapeJuice.png",
+      alt: "Bottles of vape juice on display",
     },
     {
       title: "Vape Mods",
       image: "/vapeMods.jpg",
+      alt: "Vape mod devices on display",
     },
     {
       title: "Free Arcades & More",
       image: "/arcadeAngle.png",
+      alt: "Arcade games available in-store",
     },
   ]
 
@@ -29,9 +33,7 @@ export function ProductsSection() {
           <h2 id="products-heading" className="font-serif text-3xl font-bold md:text-4xl">
             Products
           </h2>
-          <p className="mt-2 text-muted-foreground">
-            Explore our most popular categories.
-          </p>
+          <p className="mt-2 text-muted-foreground">Explore our most popular categories.</p>
         </header>
 
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" role="list">
@@ -39,14 +41,17 @@ export function ProductsSection() {
             <li key={index} className="group relative aspect-[3/4] overflow-hidden rounded-lg bg-muted">
               <img
                 src={category.image ? getImagePath(category.image) : "/placeholder.svg"}
-                alt={category.title}
+                alt={category.alt}
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent" aria-hidden="true" />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"
+                aria-hidden="true"
+              />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-serif text-2xl font-bold uppercase text-secondary-foreground">
-                  {category.title}
-                </h3>
+                <h3 className="font-serif text-2xl font-bold uppercase text-secondary-foreground">{category.title}</h3>
               </div>
             </li>
           ))}
