@@ -30,7 +30,7 @@ export function ProductsSection() {
     <section className="py-16 md:py-24" id="products" aria-labelledby="products-heading">
       <div className="container mx-auto px-4">
         <header className="mb-8">
-          <h2 id="products-heading" className="font-serif text-3xl text-pink-400 font-bold md:text-4xl">
+          <h2 id="products-heading" className="font-serif text-3xl text-green-400 font-bold md:text-4xl">
             Products
           </h2>
           <p className="mt-2 text-muted-foreground">Explore our most popular categories.</p>
@@ -51,7 +51,7 @@ export function ProductsSection() {
                 aria-hidden="true"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-serif text-2xl font-bold uppercase text-pink-800">{category.title}</h3>
+                <h3 className="font-serif text-2xl font-bold uppercase text-green-800">{category.title}</h3>
               </div>
             </li>
           ))}

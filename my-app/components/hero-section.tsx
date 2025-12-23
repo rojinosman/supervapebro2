@@ -27,7 +27,7 @@ export function HeroSection() {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild>
+          <Button asChild variant="Text">
             <a href="#products">Browse products</a>
           </Button>
           <Button variant="secondary" asChild>
