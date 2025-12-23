@@ -44,7 +44,7 @@ export function Navigation() {
           <a
             href="#about"
             className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md"
-            aria-label="Go to homepage"
+            aria-label="Skip to main content"
           >
             <Image
               src={getImagePath("/Logo.png")}
