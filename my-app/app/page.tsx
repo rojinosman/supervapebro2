@@ -6,6 +6,7 @@ import { ContactAndLocate } from "@/components/contact-locate"
 import { ProductsSection } from "@/components/products"
 import { Footer } from "@/components/footer"
 import { AgeVerification } from "@/components/ageVerification"
+import { SpecialsPopup } from "@/components/specials-popup"
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
         Skip to main content
       </a>
       <AgeVerification />
+      <SpecialsPopup /> 
       <Navigation />
 
       <main id="main-content" tabIndex={-1} className="outline-none">
