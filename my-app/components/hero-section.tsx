@@ -9,7 +9,7 @@ export function HeroSection() {
       id="about"
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('${getImagePath("/heroImage.png")}')`,
+        backgroundImage: `url('${getImagePath("/heroImage.jpeg")}')`,
       }}
       aria-labelledby="hero-heading"
     >

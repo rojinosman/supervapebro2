@@ -47,7 +47,7 @@ export function Navigation() {
             aria-label="Skip to main content"
           >
             <Image
-              src={getImagePath("/Logo.png")}
+              src={getImagePath("/Logo.jpeg")}
               alt="Super Vape Bros logo"
               width={200}
               height={200}

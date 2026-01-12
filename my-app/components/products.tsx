@@ -6,22 +6,22 @@ export function ProductsSection() {
   const categories = [
     {
       title: "Disposables",
-      image: "/vapes.png",
+      image: "/vapes.jpeg",
       alt: "Disposable vape devices on display",
     },
     {
       title: "Vape Juice",
-      image: "/vapeJuice.png",
+      image: "/vapeJuice.jpeg",
       alt: "Bottles of vape juice on display",
     },
     {
       title: "Vape Mods",
-      image: "/vapeMods.jpg",
+      image: "/vapeMods.jpeg",
       alt: "Vape mod devices on display",
     },
     {
       title: "Free Arcades & More",
-      image: "/arcadeAngle.png",
+      image: "/arcadeAngle.jpeg",
       alt: "Arcade games available in-store",
     },
   ]
