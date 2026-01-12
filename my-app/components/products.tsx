@@ -16,7 +16,7 @@ export function ProductsSection() {
     },
     {
       title: "Vape Mods",
-      image: "/vapeMods.jpeg",
+      image: "/vapeMods.jpg",
       alt: "Vape mod devices on display",
     },
     {
