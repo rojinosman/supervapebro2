@@ -19,7 +19,6 @@ export default function HomePage() {
         Skip to main content
       </a>
       <AgeVerification />
-      <SpecialsPopup /> 
       <Navigation />
 
       <main id="main-content" tabIndex={-1} className="outline-none">
