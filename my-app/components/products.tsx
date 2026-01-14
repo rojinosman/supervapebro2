@@ -20,6 +20,16 @@ export function ProductsSection() {
       alt: "Vape mod devices on display",
     },
     {
+      title: "ATM",
+      image: "/atm.jpeg",
+      description: "Convenient ATM service available in-store",
+    },
+    {
+      title: "Cigars",
+      image: "/premium-cigar-collection.jpg",
+      description: "Premium cigars and accessories for enthusiasts",
+    },
+    {
       title: "Free Arcades & More",
       image: "/arcadeAngle.jpeg",
       alt: "Arcade games available in-store",
