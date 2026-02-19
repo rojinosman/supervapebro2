@@ -29,6 +29,13 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Google AdSense - anchor ad */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3452144462263723"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
+
         {/* Skip link for keyboard users */}
         <a href="#main-content" className="skip-link">
           Skip to main content
