@@ -14,6 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3452144462263723"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         {/* Google Analytics */}
         <Script
@@ -28,13 +35,6 @@ export default function RootLayout({
             gtag('config', 'G-NVT4YJC0C3');
           `}
         </Script>
-
-        {/* Google AdSense - anchor ad (beforeInteractive so verification crawler sees it) */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3452144462263723"
-          strategy="beforeInteractive"
-          crossOrigin="anonymous"
-        />
 
         {/* Skip link for keyboard users */}
         <a href="#main-content" className="skip-link">
