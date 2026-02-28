@@ -42,9 +42,9 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="flex justify-between items-center h-16">
           <a
-            href="#about"
+            href="/"
             className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md"
-            aria-label="Skip to main content"
+            aria-label="Super Vape Bros home"
           >
             <Image
               src={getImagePath("/Logo.jpeg")}
@@ -58,6 +58,12 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
+            <a
+              href="/about"
+              className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
+            >
+              About
+            </a>
             <a
               href="#products"
               className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
@@ -98,14 +104,21 @@ export function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
               <a
                 ref={firstMobileLinkRef}
-                href="#products"
+                href="/about"
+                className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                onClick={closeMenu}
+              >
+                About
+              </a>
+              <a
+                href="/#products"
                 className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 onClick={closeMenu}
               >
                 Products
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 onClick={closeMenu}
               >

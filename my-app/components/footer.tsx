@@ -15,9 +15,15 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-lg font-bold mb-4">Super Vape Bros INC</h2>
-            <p className="text-sm text-primary-foreground/80">
+            <p className="text-sm text-primary-foreground/80 mb-4">
               Visit us in downtown San Diego for a wide selection of products and a comfortable lounge.
             </p>
+            <a
+              href="/about"
+              className="text-sm text-primary-foreground/90 underline underline-offset-4 hover:text-primary-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
+            >
+              Learn more about us
+            </a>
           </div>
 
           <div>

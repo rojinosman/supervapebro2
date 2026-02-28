@@ -25,6 +25,11 @@ export function HeroSection() {
         <p className="mt-4 text-lg text-white/90">
           Quality vapes, great service, and a comfortable lounge experience—plus free arcades.
         </p>
+        <p className="mt-3 text-base text-white/80 max-w-2xl mx-auto">
+          Located in the heart of downtown San Diego at 530 3rd Ave, Super Vape Bros offers a wide selection of
+          disposables, vape juice, mods, cigars, and accessories. Our team is dedicated to helping you find the right
+          products while providing a relaxed, inviting space to browse and enjoy.
+        </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild variant="Text">

@@ -8,31 +8,43 @@ export function ProductsSection() {
       title: "Disposables",
       image: "/vapes.jpeg",
       alt: "Disposable vape devices on display",
+      description:
+        "Convenient single-use devices in a variety of flavors and nicotine strengths. Perfect for beginners or on-the-go vaping.",
     },
     {
       title: "Vape Juice",
       image: "/vapeJuice.jpeg",
       alt: "Bottles of vape juice on display",
+      description:
+        "Premium e-liquids from trusted brands. Choose from fruity, menthol, tobacco, dessert, and custom blends in multiple nicotine levels.",
     },
     {
       title: "Vape Mods",
       image: "/vapeMods.jpeg",
       alt: "Vape mod devices on display",
+      description:
+        "Refillable devices and box mods for customizable vaping. Rebuildable coils, adjustable wattage, and long-lasting performance.",
     },
     {
       title: "ATM",
       image: "/atm.jpeg",
-      description: "Convenient ATM service available in-store",
+      alt: "ATM machine available in-store",
+      description:
+        "Convenient ATM service available in-store for your cash needs. Located inside our downtown San Diego shop.",
     },
     {
       title: "Cigars",
       image: "/premium-cigar-collection.jpg",
-      description: "Premium cigars and accessories for enthusiasts",
+      alt: "Premium cigars and accessories",
+      description:
+        "Premium cigars and accessories for enthusiasts. Hand-picked selection from top brands, plus cutters, lighters, and humidors.",
     },
     {
       title: "Free Arcades & More",
       image: "/arcadeAngle.jpeg",
       alt: "Arcade games available in-store",
+      description:
+        "Classic arcade games free to play for customers. Relax in our lounge, browse our products, and enjoy a nostalgic gaming break.",
     },
   ]
 
@@ -62,6 +74,7 @@ export function ProductsSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="font-serif text-2xl font-bold uppercase text-green-800">{category.title}</h3>
+                <p className="mt-2 text-sm text-green-900/90 line-clamp-2">{category.description}</p>
               </div>
             </li>
           ))}

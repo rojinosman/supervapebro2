@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Super Vape Bros",
-  description: "Vape shop site",
+  title: "Super Vape Bros | Downtown San Diego Vape Shop | Lounge & Arcade",
+  description:
+    "Super Vape Bros is a downtown San Diego vape shop offering quality disposables, vape juice, mods, cigars, and more. Visit our lounge with free arcades, friendly service, and a welcoming environment at 530 3rd Ave.",
 };
 
 export default function RootLayout({

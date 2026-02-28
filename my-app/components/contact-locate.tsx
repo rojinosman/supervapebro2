@@ -21,6 +21,12 @@ export function ContactAndLocate() {
               We offer a wide selection of quality products and entertainment. We believe in quality service and ensure
               that our customers always feel welcome and comfortable. Enjoy our lounges and free arcades.
             </p>
+            <p className="mb-6 text-muted-foreground leading-relaxed">
+              Super Vape Bros has been serving downtown San Diego with premium vape products, cigars, and a unique
+              retail experience. Whether you&apos;re new to vaping or a seasoned enthusiast, our knowledgeable staff can
+              help you find the right device, flavor, or accessory. Stop by to browse our inventory, relax in our
+              lounge, or play a few rounds on our free arcade games.
+            </p>
 
             <div className="mt-4">
               <p className="font-semibold text-accent">Open Hours:</p>
@@ -45,9 +51,6 @@ export function ContactAndLocate() {
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-lg bg-secondary">
               <img src={getImagePath("/hookahAngle.jpeg")} alt="Products display" className="h-full w-full object-cover" />
-            </div>
-            <div className="absolute -bottom-4 -left-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary md:-bottom-8 md:-left-8 md:h-24 md:w-24">
-              <Sparkles aria-hidden="true" className="h-8 w-8 text-primary-foreground md:h-12 md:w-12" />
             </div>
           </div>
         </div>
