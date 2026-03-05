@@ -14,7 +14,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-lg font-bold mb-4">Super Vape Bros INC</h2>
+            <h2 className="text-lg font-bold mb-4">Super Vape Bros</h2>
             <p className="text-sm text-primary-foreground/80 mb-4">
               Visit us in downtown San Diego for a wide selection of products and a comfortable lounge.
             </p>
