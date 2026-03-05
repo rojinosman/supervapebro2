@@ -4,17 +4,7 @@ export function getImagePath(path: string): string {
 
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
 
-  // Preferred: injected at build time from next.config.ts
-  const envBase = process.env.NEXT_PUBLIC_BASEPATH ?? "";
-
-  // Fallback: infer from URL at runtime (helps if env is missing)
-  let inferredBase = "";
-  if (!envBase && typeof window !== "undefined") {
-    const first = window.location.pathname.split("/").filter(Boolean)[0];
-    // If hosted at https://<user>.github.io/<repo>/..., first segment is repo
-    if (first) inferredBase = `/${first}`;
-  }
-
-  const basePath = envBase || inferredBase;
+  // Use build-time base path only (avoids hydration mismatch from pathname inference)
+  const basePath = process.env.NEXT_PUBLIC_BASEPATH ?? "";
   return `${basePath}${normalizedPath}`;
 }

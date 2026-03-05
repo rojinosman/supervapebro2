@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { ContactAndLocate } from "@/components/contact-locate"
@@ -9,6 +10,15 @@ import { AgeVerification } from "@/components/ageVerification"
 import { SpecialsPopup } from "@/components/specials-popup"
 
 export default function HomePage() {
+  useEffect(() => {
+    const hash = window.location.hash?.replace("#", "")
+    if (hash) {
+      const el = document.getElementById(hash)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [])
   return (
     <>
       {/* Skip link for keyboard + screen reader users */}

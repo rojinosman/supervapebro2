@@ -1,15 +1,19 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { getImagePath } from "@/lib/image-utils"
 import { Menu, X } from "lucide-react"
 
 export function Navigation() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null)
   const firstMobileLinkRef = useRef<HTMLAnchorElement | null>(null)
+  const isHome = pathname === "/" || pathname === ""
 
   const closeMenu = () => {
     setIsOpen(false)
@@ -64,18 +68,37 @@ export function Navigation() {
             >
               About
             </a>
-            <a
-              href="/#products"
-              className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
-            >
-              Products
-            </a>
-            <a
-              href="/#contact"
-              className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
-            >
-              Contact
-            </a>
+            {isHome ? (
+              <>
+                <a
+                  href="#products"
+                  className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
+                >
+                  Products
+                </a>
+                <a
+                  href="#contact"
+                  className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
+                >
+                  Contact
+                </a>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/#products"
+                  className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
+                >
+                  Products
+                </Link>
+                <Link
+                  href="/#contact"
+                  className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
+                >
+                  Contact
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,20 +133,41 @@ export function Navigation() {
               >
                 About
               </a>
-              <a
-                href="/#products"
-                className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                onClick={closeMenu}
-              >
-                Products
-              </a>
-              <a
-                href="/#contact"
-                className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                onClick={closeMenu}
-              >
-                Contact
-              </a>
+              {isHome ? (
+                <>
+                  <a
+                    href="#products"
+                    className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    onClick={closeMenu}
+                  >
+                    Products
+                  </a>
+                  <a
+                    href="#contact"
+                    className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    onClick={closeMenu}
+                  >
+                    Contact
+                  </a>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/#products"
+                    className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    onClick={closeMenu}
+                  >
+                    Products
+                  </Link>
+                  <Link
+                    href="/#contact"
+                    className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    onClick={closeMenu}
+                  >
+                    Contact
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         )}
