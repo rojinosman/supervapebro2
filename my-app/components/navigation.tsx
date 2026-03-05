@@ -65,13 +65,13 @@ export function Navigation() {
               About
             </a>
             <a
-              href="#products"
+              href="/#products"
               className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
             >
               Products
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="text-sm font-medium hover:text-foreground/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md px-1 py-1"
             >
               Contact
