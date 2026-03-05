@@ -21,6 +21,9 @@ export function AgeVerification() {
     sessionStorage.setItem("ageVerified", "true")
     setIsVerified(true)
     setShowModal(false)
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("ageVerified"))
+    }
   }
 
   const handleNo = () => {
