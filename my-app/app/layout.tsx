@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { AdSenseLoader } from "@/components/adsense-loader";
 
 export const metadata: Metadata = {
   title: "Super Vape Bros | Downtown San Diego Vape Shop | Lounge & Arcade",
@@ -16,7 +15,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        {/* AdSense verification code snippet (as requested by Google) */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3452144462263723"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         {/* Google Analytics */}
         <Script
@@ -36,8 +42,6 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-
-        <AdSenseLoader />
 
         {children}
       </body>

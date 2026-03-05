@@ -30,8 +30,8 @@ export function ContactAndLocate() {
 
             <div className="mt-4">
               <p className="font-semibold text-accent">Open Hours:</p>
-              <p className="text-muted-foreground">10am-8pm Sunday-Thursday</p>
-              <p className="text-muted-foreground">10am-10pm Friday-Saturday</p>
+              <p className="text-muted-foreground">9am-9pm Sunday-Thursday</p>
+              <p className="text-muted-foreground">9am-10pm Friday-Saturday</p>
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
