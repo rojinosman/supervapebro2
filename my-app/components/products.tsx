@@ -40,18 +40,25 @@ export function ProductsSection() {
         "Premium cigars and accessories for enthusiasts. Hand-picked selection from top brands, plus cutters, lighters, and humidors.",
     },
     {
-      title: "Free Arcades & More",
-      image: "/arcadeAngle.jpeg",
-      alt: "Arcade games available in-store",
-      description:
-        "Classic arcade games free to play for customers. Relax in our lounge, browse our products, and enjoy a nostalgic gaming break.",
-    },
-    {
       title: "Hookah",
-      image: "/hooka.png",
+      image: "/hooka.jpg",
       alt: "Hookah available in-store",
       description:
         "Premium hookah products for enthusiasts. Hand-picked selection from top brands, plus cutters, lighters, and humidors.",
+    },
+    {
+      title: "Scratchers",
+      image: "/scratchers.jpg",
+      alt: "Scratchers available in-store",
+      description:
+        "Scratch off the top to reveal the prize inside! Buy a scratcher and scratch off the top to reveal the prize inside!",
+    },
+    {
+      title: "Lottery",
+      image: "/lottery.jpg",
+      alt: "Lottery available in-store",
+      description:
+        "Lottery tickets! Enter to win cash prizes!",
     },
     {
       title: "Accessories",
@@ -61,18 +68,11 @@ export function ProductsSection() {
         "Accessories for enthusiasts. Hats, sunglasses, and more!",
     },
     {
-      title: "Scratchers",
-      image: "/scratchers.png",
-      alt: "Scratchers available in-store",
+      title: "Free Arcades & More",
+      image: "/arcadeAngle.jpeg",
+      alt: "Arcade games available in-store",
       description:
-        "Scratch off the top to reveal the prize inside! Buy a scratcher and scratch off the top to reveal the prize inside!",
-    },
-    {
-      title: "Lottery",
-      image: "/lottery.png",
-      alt: "Lottery available in-store",
-      description:
-        "Lottery tickets! Enter to win cash prizes!",
+        "Classic arcade games free to play for customers. Relax in our lounge, browse our products, and enjoy a nostalgic gaming break.",
     },
   ]
 
