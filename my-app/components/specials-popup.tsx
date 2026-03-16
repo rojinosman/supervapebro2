@@ -1,8 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
+import { getImagePath } from "@/lib/image-utils"
 
 const SHOW_SPECIALS = true // Set to false when you don't have specials
 
@@ -12,16 +14,24 @@ export function SpecialsPopup() {
   useEffect(() => {
     if (!SHOW_SPECIALS) return
 
-    const ageVerified = sessionStorage.getItem("ageVerified")
-    const specialsShown = sessionStorage.getItem("specialsShown")
-
-    if (ageVerified === "true" && specialsShown !== "true") {
-      // Small delay to let age verification close first
-      const timer = setTimeout(() => {
+    const maybeShow = () => {
+      const ageVerified = sessionStorage.getItem("ageVerified")
+      const specialsShown = sessionStorage.getItem("specialsShown")
+      if (ageVerified === "true" && specialsShown !== "true") {
         setShowModal(true)
-      }, 300)
-      return () => clearTimeout(timer)
+      }
     }
+
+    // 1) Check immediately on mount (covers page reloads)
+    maybeShow()
+
+    // 2) Also react when the user clicks YES on the age gate
+    const onVerified = () => {
+      maybeShow()
+    }
+
+    window.addEventListener("ageVerified", onVerified)
+    return () => window.removeEventListener("ageVerified", onVerified)
   }, [])
 
   const handleClose = () => {
@@ -35,15 +45,26 @@ export function SpecialsPopup() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md pt-20"
       role="dialog"
       aria-modal="true"
       aria-labelledby="specials-title"
     >
-      <div className="mx-4 max-w-md w-full rounded-lg border-2 border-primary bg-background p-6 shadow-2xl">
-        <div className="flex items-start justify-between mb-6">
-          <h2 id="specials-title" className="font-heading text-2xl font-bold uppercase text-primary">
-            Today's Specials
+      {/* Flying clouds + falling shamrocks effect */}
+      <div className="luck-overlay absolute inset-0 overflow-hidden">
+        <div className="luck-cloud" />
+        <div className="luck-cloud" />
+        <div className="luck-cloud" />
+        <div className="luck-shamrock" />
+        <div className="luck-shamrock" />
+        <div className="luck-shamrock" />
+        <div className="luck-shamrock" />
+      </div>
+
+      <div className="mx-4 max-w-sm w-full rounded-lg border-2 border-primary bg-background p-4 shadow-2xl">
+        <div className="flex items-start justify-between mb-3">
+          <h2 id="specials-title" className="font-heading text-xl font-bold uppercase text-primary">
+            Limited-Time Special
           </h2>
           <Button
             onClick={handleClose}
@@ -56,31 +77,22 @@ export function SpecialsPopup() {
           </Button>
         </div>
 
-        <div className="space-y-6">
-          <div className="space-y-4">
-            <div className="rounded-lg border border-primary/30 bg-primary/5 p-4">
-              <h3 className="font-heading text-lg font-bold uppercase text-primary mb-2">20% OFF All Glass</h3>
-              <p className="text-sm text-muted-foreground">
-                Get 20% off all glass pieces, bongs, and pipes. Limited time offer!
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-primary/30 bg-primary/5 p-4">
-              <h3 className="font-heading text-lg font-bold uppercase text-primary mb-2">
-                Buy 2 Get 1 Free Vape Cartridges
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Purchase any 2 vape cartridges and get your 3rd one free. Mix and match flavors!
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-primary/30 bg-primary/5 p-4">
-              <h3 className="font-heading text-lg font-bold uppercase text-primary mb-2">New Customer Special</h3>
-              <p className="text-sm text-muted-foreground">
-                First-time customers receive 15% off their entire purchase. Show ID at checkout.
-              </p>
-            </div>
+        <div className="space-y-4">
+          <div className="relative w-full overflow-hidden rounded-md">
+            <Image
+              src={getImagePath("/StPatricksDayAd.gif")}
+              alt="Puffin' on Pure Luck 10% off promotion"
+              width={600}
+              height={750}
+              className="h-auto w-full max-h-[60vh] object-contain"
+              priority
+            />
           </div>
+
+          <p className="text-xs text-muted-foreground text-center">
+            Offer valid March 16–18, 2026, on select items only. Eligible items subject to change without notice. See
+            store for details.
+          </p>
 
           <Button
             onClick={handleClose}

@@ -124,3 +124,96 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Floating clouds and falling shamrocks used by the St. Patrick's promo */
+.luck-overlay {
+  pointer-events: none;
+}
+
+.luck-cloud {
+  position: absolute;
+  top: -20%;
+  width: 220px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #ffffffcc, #ffffff00 60%),
+    radial-gradient(circle at 70% 40%, #ffffffdd, #ffffff00 60%);
+  opacity: 0.5;
+  filter: blur(2px);
+  animation: luck-cloud-drift 20s linear infinite;
+}
+
+.luck-cloud:nth-child(1) {
+  left: -15%;
+  animation-delay: 0s;
+}
+.luck-cloud:nth-child(2) {
+  left: 20%;
+  animation-delay: 4s;
+}
+.luck-cloud:nth-child(3) {
+  left: 60%;
+  animation-delay: 8s;
+}
+
+@keyframes luck-cloud-drift {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(40vw) translateY(10vh);
+  }
+}
+
+.luck-shamrock {
+  position: absolute;
+  top: -5%;
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle at 30% 30%, #22c55e, #15803d);
+  border-radius: 50%;
+  box-shadow: -12px 0 0 0 #22c55e, 12px 0 0 0 #22c55e, 0 -12px 0 0 #22c55e;
+  animation: luck-shamrock-fall 6s linear infinite;
+}
+
+.luck-shamrock::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 18px;
+  background: #15803d;
+  border-radius: 999px;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+}
+
+.luck-shamrock:nth-child(4) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.luck-shamrock:nth-child(5) {
+  left: 35%;
+  animation-delay: 0.5s;
+}
+.luck-shamrock:nth-child(6) {
+  left: 65%;
+  animation-delay: 1s;
+}
+.luck-shamrock:nth-child(7) {
+  left: 85%;
+  animation-delay: 1.5s;
+}
+
+@keyframes luck-shamrock-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(80vh) rotate(260deg);
+    opacity: 0;
+  }
+}
