@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 import { getImagePath } from "@/lib/image-utils"
 
-const SHOW_SPECIALS = true // Set to false when you don't have specials
+const SHOW_SPECIALS = false // Disabled: remove St. Patrick's promo popup
 
 export function SpecialsPopup() {
   const [showModal, setShowModal] = useState(false)
