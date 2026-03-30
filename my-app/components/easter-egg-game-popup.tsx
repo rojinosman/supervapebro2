@@ -314,8 +314,8 @@ export function EasterEggGamePopup() {
   if (!showModal) return null
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-md px-3 py-8">
-      <div className="relative w-full max-w-3xl overflow-hidden rounded-[2rem] border-2 border-white/60 bg-[#87cfff] shadow-2xl">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-md px-2 py-4 sm:px-3 sm:py-8">
+      <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto overflow-x-hidden rounded-[2rem] border-2 border-white/60 bg-[#87cfff] shadow-2xl">
         <Button
           onClick={handleClose}
           variant="ghost"
@@ -377,7 +377,7 @@ export function EasterEggGamePopup() {
 
         <Bunny />
 
-        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-2xl flex-col items-center justify-center px-4 py-6 text-center">
+        <div className="relative z-10 mx-auto flex min-h-[540px] max-w-2xl flex-col items-center justify-center px-3 py-4 text-center sm:min-h-[620px] sm:px-4 sm:py-6">
           <motion.div
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -387,7 +387,7 @@ export function EasterEggGamePopup() {
             <div className="inline-flex items-center rounded-full border border-white/50 bg-white/25 px-4 py-1 text-sm font-semibold text-white backdrop-blur-sm">
               Easter Egg Discount Game
             </div>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.18)] sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-black tracking-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.18)] sm:mt-3 sm:text-4xl">
               Crack the Egg, Reveal Your Deal
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-sm font-medium text-white/95 sm:text-base">
@@ -405,7 +405,7 @@ export function EasterEggGamePopup() {
             className="relative flex items-center justify-center rounded-[2rem] p-3 outline-none focus-visible:ring-4 focus-visible:ring-white/60"
             aria-label={isOpen ? "Discount revealed" : "Crack the Easter egg"}
           >
-            <div className="relative h-[400px] w-[340px]">
+            <div className="relative h-[300px] w-[260px] sm:h-[400px] sm:w-[340px]">
               <AnimatePresence mode="wait">
                 {isOpen ? (
                   <motion.div
@@ -414,7 +414,7 @@ export function EasterEggGamePopup() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.25 }}
-                    className="absolute inset-0 flex items-center justify-center"
+                    className="absolute inset-0 flex origin-center scale-[0.68] items-center justify-center sm:scale-100"
                   >
                     <OpenEgg discount={discount} />
                   </motion.div>
@@ -425,7 +425,7 @@ export function EasterEggGamePopup() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute inset-0 flex items-center justify-center"
+                    className="absolute inset-0 flex origin-center scale-[0.68] items-center justify-center sm:scale-100"
                   >
                     <ClosedEgg crackStage={crackStage} />
                   </motion.div>
