@@ -7,7 +7,6 @@ import { ContactAndLocate } from "@/components/contact-locate"
 import { ProductsSection } from "@/components/products"
 import { Footer } from "@/components/footer"
 import { AgeVerification } from "@/components/ageVerification"
-import { EasterEggGamePopup } from "@/components/easter-egg-game-popup"
 
 export default function HomePage() {
   useEffect(() => {
@@ -29,7 +28,6 @@ export default function HomePage() {
         Skip to main content
       </a>
       <AgeVerification />
-      <EasterEggGamePopup />
       <Navigation />
 
       <main id="main-content" tabIndex={-1} className="outline-none">
